@@ -34,8 +34,10 @@ public class AccountController {
 				.orElseThrow(() -> new Exception("Resource not found"));
 		return ResponseEntity.ok().body(custModel);
 	}
-	
-	@GetMapping("/{accountId}/user")
+	/*TODO- Controller advice can be added for catching
+ and designing custom exceptions with custom response
+	*/
+@GetMapping("/{accountId}/user")
 	public ResponseEntity<CustomerResponseDTO> getUserByAccountId(@PathVariable("accountId") String accountId) throws Exception {
 		AccountModel accModel = accountServiceImpl.getAccount(accountId)
 				.orElseThrow(() -> new Exception("Resource not found"));
