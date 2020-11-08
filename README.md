@@ -5,3 +5,4 @@ This repo contains different services regsitered with eureka server
 4. Api gateway- For routing the request to next urls and authenticate the necessary request
 
 Multiple instances of services can be hosted by adding different url conf.files for services and registering them with Eureka server.
+Test cases are added in customer and account service
